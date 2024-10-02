@@ -1,0 +1,23 @@
+<div class="container mt-5">
+  <h1 class="display-4 text-center">Produtinhos!</h1>
+  
+  <div class="row mt-4">
+    <div *ngIf="produtos.length === 0" class="alert alert-warning text-center">
+      Nenhum produto disponível no momento.
+    </div>
+    
+    <div *ngFor="let produto of produtos" class="col-md-4">
+      <div class="card mb-4 shadow-sm">
+        <img src="https://via.placeholder.com/300" class="card-img-top" alt="{{ produto.nome }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ produto.nome }}</h5>
+          <p class="card-text">{{ produto.descricao }}</p>
+          <p class="card-text"><strong>Preço: R$ {{ produto.preco }}</strong></p>
+          <button class="btn" [ngClass]="{'btn-secondary': !produto.emEstoque, 'btn-primary': produto.emEstoque}" [disabled]="!produto.emEstoque">
+            {{ produto.emEstoque ? 'Comprar' : 'Fora de Estoque' }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<!-- home.component.html -->
+<div class="container mt-4">
+  <div *ngIf="showBanner" class="banner mt-4 p-4 text-white bg-pink">
+    <h1>Promoção Exclusiva!</h1>
+    <p>Aproveite nossas ofertas incríveis!</p>
+    <button class="btn btn-light" (click)="toggleBanner()">
+      {{ showBanner ? 'Ocultar Banner' : 'Mostrar Banner' }}
+    </button>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-4">
+      <div class="card mb-4">
+        <img src="https://via.placeholder.com/300x200.png?text=Esmalte" class="card-img-top" alt="Esmalte">
+        <div class="card-body text-center">
+          <h5 class="card-title">Esmalte Rosa Chic</h5>
+          <p class="card-text">Um rosa vibrante para suas unhas.</p>
+          <a routerLink="/produtos" class="btn btn-pink">Ver Produtos</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mb-4">
+        <img src="https://via.placeholder.com/300x200.png?text=Maquiagem" class="card-img-top" alt="Maquiagem">
+        <div class="card-body text-center">
+          <h5 class="card-title">Base Matte</h5>
+          <p class="card-text">Base de longa duração para um acabamento perfeito.</p>
+          <a routerLink="/produtos" class="btn btn-pink">Ver Produtos</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mb-4">
+        <img src="https://via.placeholder.com/300x200.png?text=Cabelo" class="card-img-top" alt="Produtos para Cabelo">
+        <div class="card-body text-center">
+          <h5 class="card-title">Shampoo Hidratante</h5>
+          <p class="card-text">Mantém seus cabelos hidratados e saudáveis.</p>
+          <a routerLink="/produtos" class="btn btn-pink">Ver Produtos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-4">
+    <h2>Explore nossos produtos e realce sua beleza!</h2>
+    <a routerLink="/produtos" class="btn btn-lg btn-pink">Ver Todos os Produtos</a>
+  </div>
+</div>
+
+<style>
+  .bg-pink {
+    background-color: #ff69b4; 
+  }
+  .btn-pink {
+    background-color: #ff69b4; 
+    color: white;
+  }
+  .btn-pink:hover {
+    background-color: #ff1493; 
+  }
+</style>
